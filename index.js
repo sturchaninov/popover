@@ -6,6 +6,8 @@ var Tip = require('tip')
   , q = require('query')
   , inherit = require('inherit');
 
+var Template = require('./template');
+
 /**
  * Expose `Popover`.
  */
@@ -22,7 +24,7 @@ module.exports = Popover;
  */
 
 function Popover(content, title) {
-  Tip.call(this, require('./template'));
+  Tip.call(this, Template);
   this.classname = 'popover';
   this.classes.add('popover');
   if (title) this.title(title);
